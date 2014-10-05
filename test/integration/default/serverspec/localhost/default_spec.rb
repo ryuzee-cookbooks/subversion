@@ -10,5 +10,5 @@ describe file('/usr/bin/svn') do
 end
 
 describe command( "/usr/bin/svn --help 2>/dev/null | grep '1.6'" ) do
-  it { should return_exit_status 0 }
+  its(:exit_status) { should eq 0 }
 end
